@@ -1,0 +1,24 @@
+body{
+    background: rgb(136, 232, 245);
+    margin-top: 3%;
+}
+.bg-inside{
+    background: rgba(183, 233, 245, 0.4);
+    box-shadow: 0px 0px 1px rgb(10, 185, 216);
+}
+.calculator{
+    box-shadow: 4px 8px 50px rgb(29, 134, 253);
+    background-color: rgb(134, 221, 255);
+}
+.bg-button{
+     background: rgba(255, 255, 255, 0.4);
+     width: 100% !important;
+     box-shadow: 0 0 5px 3px rgb(144, 233, 248);
+}
+.btn:hover{
+    background: rgb(255, 255, 255) !important;
+}
+
+.bg-result{
+    background-color: rgb(201, 239, 248);
+}

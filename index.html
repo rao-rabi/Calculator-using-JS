@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container col-xxl-3 col-xl-5 col-lg-6 col-md-8 col-12 calculator p-md-4 p-2 rounded-5 border border-white border-5">
+        <div class="row bg-inside p-2 rounded-5">
+            <div>
+                <input type="text" readonly class="border-0 rounded-3 bg-result col-12 p-5 fw-medium fs-4" id="output" style="outline: none;">
+            </div>
+            <div class="row row-cols-4 fs-2 mt-4 gy-2">
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-success" onclick="clearOutput()">C</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendLog('log')">log</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('%')">%</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('*')">x</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('7')">7</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('8')">8</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('9')">9</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('/')">/</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('4')">4</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('5')">5</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('6')">6</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('-')">-</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('1')">1</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('2')">2</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('3')">3</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('+')">+</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendNumber('.')">.</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('0')">0</button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-warning" onclick="appendBack()"><span class="fs-6 fw-bold border border-2 border-warning ps-md-2 pe-md-2 p-1">x</span></button></div>
+                <div class="col"><button type="submit"
+                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-info text-primary  fw-bold border-0" style="width: 100%;" onclick="result('result')">=</button></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+        <script src="script.js"></script>
+</body>
+
+</html>
