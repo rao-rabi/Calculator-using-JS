@@ -10,6 +10,8 @@ function clearOutput(){
     output.value = "";
 }
 
+//show result function
+
 function result(result){
     try {
         output.value = eval(output.value)
@@ -18,9 +20,13 @@ function result(result){
     }
 }
 
+// delete function
+
 function appendBack() {
     output.value = output.value.slice(0, -1)
 }
+
+//log function
 
 function appendLog(){
     const num = parseFloat(output.value);
