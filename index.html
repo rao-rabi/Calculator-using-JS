@@ -11,52 +11,52 @@
 </head>
 
 <body>
-    <div class="container col-xxl-3 col-xl-5 col-lg-6 col-md-8 col-12 calculator p-md-4 p-2 rounded-5 border border-white border-5">
-        <div class="row bg-inside p-2 rounded-5">
+    <div class="container col-xxl-3 col-xl-5 col-lg-6 col-md-8 col-12 calculator p-md-6 p-2 rounded-5 border border-white border-5">
+        <div class="row bg-inside p-md-2 m-1 d-flex justify-content-center align-items-center rounded-5">
             <div>
-                <input type="text" readonly class="border-0 rounded-3 bg-result col-12 p-5 fw-medium fs-4" id="output" style="outline: none;">
+                <input type="text" readonly class="border-0 rounded-5 bg-result col-12 p-5 fw-medium fs-4" id="output" style="outline: none;">
             </div>
-            <div class="row row-cols-4 fs-2 mt-4 gy-2">
+            <div class="row row-cols-4 mt-4 gy-2">
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-success" onclick="clearOutput()">C</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0 text-success" onclick="clearOutput()">AC</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendLog('log')">log</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0" onclick="appendLog('log')">log</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('%')">%</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0" onclick="appendOperator('%')">%</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('*')">x</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0" onclick="appendOperator('*')">x</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('7')">7</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('7')">7</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('8')">8</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('8')">8</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('9')">9</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('9')">9</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('/')">/</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0" onclick="appendOperator('/')">/</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('4')">4</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('4')">4</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('5')">5</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('5')">5</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('6')">6</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('6')">6</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('-')">-</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0" onclick="appendOperator('-')">-</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('1')">1</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('1')">1</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('2')">2</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('2')">2</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('3')">3</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('3')">3</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendOperator('+')">+</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0" onclick="appendOperator('+')">+</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0" onclick="appendNumber('.')">.</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('00')">00</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('0')">0</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button  fw-bold border-0 text-danger" onclick="appendNumber('0')">0</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-button  fw-bold border-0 text-warning" onclick="appendBack()"><span class="fs-6 fw-bold border border-2 border-warning ps-md-2 pe-md-2 p-1">x</span></button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op  fw-bold border-0 text-success" onclick="appendBack()">DEL</button></div>
                 <div class="col"><button type="submit"
-                        class="btn p-md-4 p-2 fs-4 m-md-2 m-1 rounded-5  bg-info text-primary  fw-bold border-0" style="width: 100%;" onclick="result('result')">=</button></div>
+                        class="btn p-md-6 p-2 fs-5 m-md-2 m-1 rounded-circle  bg-button-op text-primary fw-bold border-0" onclick="result('result')">=</button></div>
             </div>
         </div>
     </div>
